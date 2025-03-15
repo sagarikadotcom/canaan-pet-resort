@@ -129,11 +129,17 @@ export default function AdminDashboard() {
 
           {selectedTab === "Boarding Updates" && (
             <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
-              <Select value={selectedMonth} onChange={(e) => setSelectedMonth(e.target.value)}>
-                {Array.from({ length: 12 }, (_, i) => (
-                  <MenuItem key={i} value={i}>{dayjs().month(i).format("MMMM")}</MenuItem>
-                ))}
-              </Select>
+            <Select
+  value={selectedMonth}
+  onChange={(e) => setSelectedMonth(Number(e.target.value))}
+>
+  {Array.from({ length: 12 }, (_, i) => (
+    <MenuItem key={i} value={i}>
+      {dayjs().month(i).format("MMMM")}
+    </MenuItem>
+  ))}
+</Select>
+
             </Box>
           )}
 
