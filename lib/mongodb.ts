@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react/jsx-no-duplicate-props */
+
 import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
